@@ -9,6 +9,7 @@ async function main () {
         await client.connect();
         console.log(client);
     } finally {
+        console.log("Closing");
         await client.close()
     }
 }
