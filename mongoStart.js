@@ -14,4 +14,10 @@ async function main () {
     }
 }
 
-main().catch(console.dir);
+async function app() {
+    console.log("Starting");
+    await main().catch(console.dir);
+    console.log("Wrap up");
+}
+
+app();
