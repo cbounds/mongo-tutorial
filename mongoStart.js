@@ -8,6 +8,9 @@ async function main () {
         var client = new mongo.MongoClient(uri);
         await client.connect();
         console.log(client);
+    } catch (err) {
+        console.log("caught");
+        console.log(err.stack);
     } finally {
         console.log("Closing");
         await client.close()
